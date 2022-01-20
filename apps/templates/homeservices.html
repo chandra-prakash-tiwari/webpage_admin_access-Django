@@ -1,0 +1,21 @@
+<div>
+    <div>
+        <div style="display: flex; height: 100%;">
+            {% for service in services %}
+            <div class="col-4" onclick="window.open('{{service.redirecturl}}','new_window');" style="background: url('{{service.image.url}}');background-size: 100% 100%;    float: left;
+            min-height: 180px;
+            padding: 10px;
+            min-width: 117px;
+            position: relative;
+            cursor: pointer;">            
+                <div style=" position:absolute;bottom:0;left:0;">
+                    <a href="{{service.redirecturl}}" target="_blank" style="color: white;text-decoration: blink;">
+                        <h2>{{service.title}}<i></i></h2>
+                        <p>{{service.description}}</p>
+                    </a>
+                </div>
+                </div>
+            {% endfor %}
+            </div>
+    </div>
+</div>

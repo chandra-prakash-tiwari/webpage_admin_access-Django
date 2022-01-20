@@ -1,0 +1,28 @@
+<div>
+    <div>
+        <div>
+            <h1 style="text-align: -webkit-center;">Our World</h1>
+        </div>
+    </div>
+
+
+    <div style="display: flex; padding: 0 7rem;">
+        {% for content in contents %}
+        <div class="card" style="width: 25vw; height: 50vh; margin: 20px;">
+            <div style="height: 75%; background-image: url('{{content.image.url}}'); background-size: 100% 100%; position: sticky;">
+                <div>
+                    <div style="position: absolute;bottom: 0;left: 0;padding: 0.2rem 0.8rem;background-color: rgba(3,3,82,0.80);color: white;">
+                        <span>{{content.type}}</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>{{content.title}}</h4>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        
+    </div>
+</div>
